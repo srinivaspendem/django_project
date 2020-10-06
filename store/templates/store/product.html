@@ -1,0 +1,98 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<br>
+	<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+
+						<div class="preview-pic tab-content">
+						  <div  ><img id="pic" src="{% static 'images/s1.JPG' %}" alt="Girl in a jacket" width="auto" height="591"></div>
+
+						</div>
+
+
+					</div>
+					<div class="details col-md-6">
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
+
+						<h1 class="product-title">Pattu saree </h1>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+						</div>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h2 class="price">Price: <span>Rs 3500</span></h2>
+
+
+						<div class="action">
+              <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='{% url 'checkout' %}';">
+                    BUY
+				  </button>
+				  
+
+
+				  <!-- {% for checkout in checkouts %}
+					  <div  ><img id="pic" src="{{checkout.image}}" alt="pattu saree" width="auto" height="591"></div> 
+
+				</div>
+
+
+			</div>
+			<div class="details col-md-6">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+				<h1 class="product-title">Pattu saree </h1>
+				<div class="rating">
+					<div class="stars">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</div>
+				</div>
+				<p class="product-description">{{checkout.description}}</p>
+				<h2 class="price">Price: <span>Rs {{checkout.price}}</span></h2>
+
+
+				<div class="action">
+	  <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='{% url 'checkout' checkout.id %}';">
+			BUY
+		  </button>
+		  {% endfor %}
+		   //-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+{% endblock content %}
